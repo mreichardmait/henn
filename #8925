@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Geräteauswahl</title>
+</head>
+<body>
+    <h1>Wählen Sie Ihre Geräte</h1>
+    <form id="deviceForm">
+        <label for="device1">Gerät 1:</label>
+        <select id="device1">
+            <option value="Gerät A">Gerät A</option>
+            <option value="Gerät B">Gerät B</option>
+            <option value="Gerät C">Gerät C</option>
+        </select><br><br>
+
+        <label for="device2">Gerät 2:</label>
+        <select id="device2">
+            <option value="Gerät A">Gerät A</option>
+            <option value="Gerät B">Gerät B</option>
+            <option value="Gerät C">Gerät C</option>
+        </select><br><br>
+
+        <label for="device3">Gerät 3:</label>
+        <select id="device3">
+            <option value="Gerät A">Gerät A</option>
+            <option value="Gerät B">Gerät B</option>
+            <option value="Gerät C">Gerät C</option>
+        </select><br><br>
+
+        <button type="button" onclick="showSelectedDevices()">Ausgewählte Geräte anzeigen</button>
+    </form>
+    <p id="selectedDevices"></p>
+
+    <script>
+        function showSelectedDevices() {
+            const device1 = document.getElementById('device1').value;
+            const device2 = document.getElementById('device2').value;
+            const device3 = document.getElementById('device3').value;
+            document.getElementById('selectedDevices').innerText = 
+                `Sie haben ausgewählt: ${device1}, ${device2}, ${device3}`;
+        }
+    </script>
+</body>
+</html>
